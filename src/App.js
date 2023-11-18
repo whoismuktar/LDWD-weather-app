@@ -2,6 +2,7 @@ import "./App.scss";
 import ConditionIcon from "./components/ConditionIcon";
 import Searchbar from "./components/Searchbar";
 import Sidebar from "./components/Sidebar";
+import VerticalWeatherCard from "./components/VerticalWeatherCard";
 
 const currentWeather = {
   city: "Madrid",
@@ -9,6 +10,8 @@ const currentWeather = {
   temperature: 31,
   condition: "sunny",
 };
+
+const todaysForecast = [];
 
 const HeroHighlight = () => {
   return (
@@ -45,6 +48,10 @@ function App() {
           <div className="content-body">
             <Searchbar />
             <HeroHighlight />
+            <VerticalWeatherCard
+              title="Today's Forecast"
+              weather={todaysForecast}
+            />
           </div>
           <div className="content-summary">456</div>
         </div>

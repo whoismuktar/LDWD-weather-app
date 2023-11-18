@@ -1,8 +1,8 @@
 import React from "react";
 import { MdSunny } from "react-icons/md";
 
-const ConditionIcon = (prop) => {
-  const { condition, size, color } = prop;
+const ConditionIcon = (props) => {
+  const { condition, size, color } = props;
 
   const getConditionIcon = () => {
     switch (condition) {
