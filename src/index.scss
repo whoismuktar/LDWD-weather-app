@@ -8,15 +8,15 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -32,15 +32,27 @@ code {
   justify-content: center;
 }
 
+.degree-icon {
+  font-size: 13px;
+  vertical-align: text-top;
+  position: absolute;
+}
+
 .sidebar {
   position: fixed;
   left: 20px;
   top: 20px;
-  background-color: #202B3B;
+  background-color: #202b3b;
   width: 100px;
   padding: 20px 0;
   height: calc(100vh - 40px);
   border-radius: 20px;
+
+  &__logo {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
 
   &__menu {
     margin-top: 35px;
@@ -54,7 +66,7 @@ code {
     margin-bottom: 20px;
     cursor: pointer;
     padding: 10px 20px;
-    
+
     &.active {
       background-color: #111b28;
       color: #ffffff;
@@ -68,5 +80,14 @@ code {
       font-size: 30px;
     }
   }
+}
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

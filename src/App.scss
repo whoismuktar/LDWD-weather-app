@@ -15,18 +15,76 @@
 
 .app-wrapper {
   background-color: #0C131E;
+  min-height: 100vh;
+  color: #9d9b9b;
+  padding: 20px 20px 0 150px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .content-body {
+    // width: 70%;
+    flex: 3;
+    // background-color: #035357;
   }
+  .content-summary {
+    // width: 30%;
+    flex: 1.5;
+    // background-color: #035357;
+  }
+}
 
-  to {
-    transform: rotate(360deg);
+.search-bar {
+  width: 100%;
+  background-color: #202b3b;
+  border-radius: 6px;
+
+  input#searchInput {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    
+    &::placeholder {
+      color: #9d9b9b;
+    }
+  }
+}
+
+.hero-highlight {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .meta-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+
+    &__city {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    &__chanceOfRain {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    &__temperature {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .degree-icon {
+      font-size: 30px;
+    }
   }
 }
