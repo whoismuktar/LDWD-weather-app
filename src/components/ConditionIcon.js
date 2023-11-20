@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCloudRain, FaCloudSunRain } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 
 const ConditionIcon = (props) => {
@@ -7,7 +8,13 @@ const ConditionIcon = (props) => {
   const getConditionIcon = () => {
     switch (condition) {
       case "sunny":
-        return <MdSunny size={size} color={color} />;
+        return <MdSunny size={size} color={color || "yellow"} />;
+      case "cloudy":
+        return <FaCloudRain size={size} color={color || "white"} />;
+      case "rainy":
+        return <FaCloudRain size={size} color={color || "white"} />;
+      case "cloudRain":
+        return <FaCloudSunRain size={size} color={color || "white"} />;
 
       default:
         break;
