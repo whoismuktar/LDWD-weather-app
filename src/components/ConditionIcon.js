@@ -3,7 +3,7 @@ import { FaCloudRain, FaCloudSunRain } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 
 const ConditionIcon = (props) => {
-  const { condition, size, color } = props;
+  const { condition, size, color, showTitle } = props;
 
   const getConditionIcon = () => {
     switch (condition) {
@@ -21,7 +21,14 @@ const ConditionIcon = (props) => {
     }
   };
 
-  return <div className="condition-icon">{getConditionIcon()}</div>;
+  return (
+    <div className="condition-el">
+      <span className="condition-el__icon">{getConditionIcon()}</span>
+      {showTitle && (
+        <span className="condition-el__title">{`${condition}`}</span>
+      )}
+    </div>
+  );
 };
 
 export default ConditionIcon;

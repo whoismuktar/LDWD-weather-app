@@ -4,9 +4,9 @@ import ConditionIcon from "./ConditionIcon";
 const WeatherItem = ({ weather }) => {
   return (
     <div className="weather-item">
-      <div className="weather-item__day">{weather.day}</div>
+      <div className="weather-item__time">{weather.time}</div>
       <div className="weather-item__icon">
-        <ConditionIcon condition={weather.condition} showTitle={true} size={40} />
+        <ConditionIcon condition={weather.condition} size={60} />
       </div>
       <div className="weather-item__temperature">
         <span>{weather.temperature}</span>
@@ -23,7 +23,6 @@ const weatherData = [
     temperature: -10,
     condition: "sunny",
     time: "6:00 AM",
-    day: "Today"
   },
   {
     city: "Turin",
@@ -31,7 +30,6 @@ const weatherData = [
     temperature: 31,
     condition: "sunny",
     time: "9:00 AM",
-    day: "Tue"
   },
   {
     city: "Lagos",
@@ -39,7 +37,6 @@ const weatherData = [
     temperature: 31,
     condition: "rainy",
     time: "12:00 AM",
-    day: "Wed"
   },
   {
     city: "Paris",
@@ -47,7 +44,6 @@ const weatherData = [
     temperature: 33,
     condition: "cloudRain",
     time: "3:00 PM",
-    day: "Thu"
   },
   {
     city: "Madrid",
@@ -55,7 +51,6 @@ const weatherData = [
     temperature: 50,
     condition: "rainy",
     time: "6:00 PM",
-    day: "Fri"
   },
   {
     city: "Mbuntu",
@@ -63,23 +58,14 @@ const weatherData = [
     temperature: -4,
     condition: "sunny",
     time: "9:00 PM",
-    day: "Sat"
-  },
-  {
-    city: "Mbuntu",
-    chanceOfRain: 100,
-    temperature: -4,
-    condition: "sunny",
-    time: "9:00 PM",
-    day: "Sun"
   },
 ];
 
-const VerticalWeatherCard = (props) => {
+const HorizontalWeatherCard = (props) => {
   const { title } = props;
 
   return (
-    <div className="weather-card weather-card__vertical">
+    <div className="weather-card weather-card__horizontal">
       <div className="weather-card__title">{title}</div>
 
       <div className="weather-card__content">
@@ -96,4 +82,4 @@ const VerticalWeatherCard = (props) => {
   );
 };
 
-export default VerticalWeatherCard;
+export default HorizontalWeatherCard;

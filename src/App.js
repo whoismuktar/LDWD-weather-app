@@ -2,6 +2,7 @@ import "./App.scss";
 import ConditionIcon from "./components/ConditionIcon";
 import Searchbar from "./components/Searchbar";
 import Sidebar from "./components/Sidebar";
+import HorizontalWeatherCard from "./components/HorizontalWeatherCard";
 import VerticalWeatherCard from "./components/VerticalWeatherCard";
 
 const currentWeather = {
@@ -48,12 +49,15 @@ function App() {
           <div className="content-body">
             <Searchbar />
             <HeroHighlight />
-            <VerticalWeatherCard
+            <HorizontalWeatherCard
               title="Today's Forecast"
               weather={todaysForecast}
             />
           </div>
-          <div className="content-summary">456</div>
+          
+          <div className="content-summary">
+            <VerticalWeatherCard title="7-Day Forecast" />
+          </div>
         </div>
       </main>
     </div>
