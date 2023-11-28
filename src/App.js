@@ -4,6 +4,7 @@ import Searchbar from "./components/Searchbar";
 import Sidebar from "./components/Sidebar";
 import HorizontalWeatherCard from "./components/HorizontalWeatherCard";
 import VerticalWeatherCard from "./components/VerticalWeatherCard";
+import WeatherUnitSummary from "./components/WeatherUnitSummary";
 
 const currentWeather = {
   city: "Madrid",
@@ -48,11 +49,15 @@ function App() {
         <div className="content-wrapper">
           <div className="content-body">
             <Searchbar />
+
             <HeroHighlight />
+
             <HorizontalWeatherCard
               title="Today's Forecast"
               weather={todaysForecast}
             />
+
+            <WeatherUnitSummary title="Air Conditions" btnTitle="See More" />
           </div>
           
           <div className="content-summary">

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCloudRain, FaCloudSunRain } from "react-icons/fa6";
+import { FaCloudRain, FaCloudSunRain, FaTemperatureHalf } from "react-icons/fa6";
 import { MdSunny } from "react-icons/md";
 
 const ConditionIcon = (props) => {
@@ -15,6 +15,8 @@ const ConditionIcon = (props) => {
         return <FaCloudRain size={size} color={color || "white"} />;
       case "cloudRain":
         return <FaCloudSunRain size={size} color={color || "white"} />;
+      case "temperature":
+        return <FaTemperatureHalf size={size} color={color || "white"} />;
 
       default:
         break;

@@ -20,6 +20,17 @@ code {
     monospace;
 }
 
+button {
+  border: 0;
+  outline: 0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: #0095ff;
+  color: #ffffff;
+}
+
 .d-flex {
   display: flex;
 }
@@ -30,6 +41,10 @@ code {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
 }
 
 .degree-icon {
@@ -101,6 +116,7 @@ code {
   padding: 30px;
   border-radius: 20px;
   background-color: #202b3b;
+  margin-bottom: 20px;
 
   &__title {
     font-size: 12px;
@@ -155,6 +171,24 @@ code {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      &__day {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .weather-unit {
+    display: flex;
+
+    &__title {
+      font-size: 20px;
+    }
+    &__subtitle {
+      font-size: 3rem;
+      color: #ffffff;
+      font-weight: bold;
     }
   }
 }
